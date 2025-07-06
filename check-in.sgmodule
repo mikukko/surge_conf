@@ -1,0 +1,19 @@
+#!name=签到Cookie获取
+#!desc=签到Cookie获取
+#!author=Mikukko[https://github.com/mikukko]
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Panda.png
+#!homepage=https://github.com/mikukko/surge_conf
+#!date=2025-07-07 00:00:00
+
+[Script]
+# nga重写获取cookie
+NGA Cookie = type=http-request, pattern=^https:\/\/ngabbs.com\/nuke.php\??, script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.cookie.js, requires-body=true
+
+# it之家重写获取cookie
+ithome Cookie = type=http-request, pattern=^https:\/\/napi\.ithome\.com\/api\/usersign\/getsigninfo?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js
+
+# v2ex重写获取cookie
+http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
+
+[MITM]
+hostname = %APPEND% ngabbs.com, napi.ithome.com, *.v2ex.com
