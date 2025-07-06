@@ -16,7 +16,7 @@ ithome Cookie = type=http-request, pattern=^https:\/\/napi\.ithome\.com\/api\/us
 
 # v2ex重写获取cookie
 http-request ^https:\/\/www\.v2ex\.com\/mission\/daily script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.cookie.js
-# cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js
+# cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/mikukko/surge_conf/master/script/v2ex-redeem.js
 
 [MITM]
 hostname = %APPEND% ngabbs.com, napi.ithome.com, *.v2ex.com
